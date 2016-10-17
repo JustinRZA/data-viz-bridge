@@ -15,8 +15,8 @@ app.use(serve(`${__dirname}/public`));
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.listen(3000, () => {
-  console.log('Server running'.green + ' at ' + 'http://localhost:'.grey + '3000'.blue);
+app.listen(80, () => {
+  console.log('Server running'.green + ' at ' + 'http://localhost:'.grey + '80'.blue);
   //
   // var request = require('request');
   // request({
