@@ -11,6 +11,7 @@ function routes (socket) {
 
   router.put('/receive', async ctx => {
     socket.broadcast('consume', ctx.request.body);
+    console.log('  →'.grey, '⨀ '.green, 'consume');
     ctx.body = panda;
   });
 

@@ -1,6 +1,5 @@
 import bodyParser from 'koa-bodyparser';
 import colors from 'colors';
-import cors from 'koa-cors';
 import Koa from 'koa';
 import logger from 'koa-logger';
 import routes from './routes';
@@ -11,7 +10,6 @@ const app = new Koa(),
   socket = sockets(app),
   router = routes(socket);
 
-app.use(cors());
 app.use(logger());
 app.use(bodyParser());
 app.use(serve(`${__dirname}/public`));
